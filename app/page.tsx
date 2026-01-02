@@ -59,7 +59,7 @@ export default function Home() {
   if (!mounted) return null
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-background via-background to-accent/5">
+    <main className="min-h-screen bg-linear-to-br from-background via-background to-accent/5">
       {/* Navigation Header */}
       <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-sm">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -82,7 +82,7 @@ export default function Home() {
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
             Small, Focused
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-accent">
               Frontend Features
             </span>
           </h2>

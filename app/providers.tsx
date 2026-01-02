@@ -37,13 +37,13 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   return (
     <>
       <div
-        className="fixed top-4 right-4 z-50 flex items-center gap-2 bg-background border border-border rounded-lg p-2 shadow-sm"
+        className="fixed top-3 right-4 z-50 flex items-center gap-2 bg-background border border-border rounded-sm shadow-sm"
         role="region"
         aria-label="Theme toggle"
       >
         <button
           onClick={toggleTheme}
-          className="p-2 rounded-md hover:bg-secondary transition-colors"
+          className="cursor-pointer p-2 rounded-sm hover:bg-secondary transition-colors"
           aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
         >
           {isDark ? (
@@ -51,12 +51,16 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
               <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
             </svg>
           ) : (
-            <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-              <path
-                fillRule="evenodd"
-                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l-2.83-2.83a1 1 0 00-1.414 1.414l2.83 2.83a1 1 0 001.414-1.414zM2.05 6.464l2.83 2.83a1 1 0 101.414-1.414L3.464 5.05A1 1 0 102.05 6.464zm9.9-1.414a1 1 0 00-1.414 1.414l2.83 2.83a1 1 0 001.414-1.414l-2.83-2.83zM3.464 14.95l2.83-2.83a1 1 0 001.414 1.414l-2.83 2.83a1 1 0 01-1.414-1.414z"
-                clipRule="evenodd"
-              />
+            <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
             </svg>
           )}
         </button>
